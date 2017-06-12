@@ -1,0 +1,17 @@
+{
+  "name": "ponyexpress",
+  "version": "0.0.1",
+  "description": "Barebones HTTP POST to Socket.io gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "@alphahw",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^5.1.0",
+    "hapi": "^16.1.1",
+    "socket.io": "^2.0.2"
+  }
+}

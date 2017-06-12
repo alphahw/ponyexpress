@@ -1,0 +1,11 @@
+{
+  "port": 8080,
+
+  "hashedSocketToken": "0e45f58ee31f7e9b09f0311246da62c35bc9c69d5c6a5cebb29deaa44e43f7a7", // ponyexpress
+
+  "postTokenPath": "payload.token",
+  "hashedPostToken": "0e45f58ee31f7e9b09f0311246da62c35bc9c69d5c6a5cebb29deaa44e43f7a7", // ponyexpress
+
+  "resDefaultPayload": {},
+  "resTimeout": 2500
+}
