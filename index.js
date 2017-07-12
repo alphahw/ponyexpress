@@ -92,7 +92,7 @@ server.route({
       resError = null;
 
       setTimeout(() => {
-        resPromise.resolve(CONFIG.resDefaultPayload);
+        if (resPromise) resPromise.resolve(CONFIG.resDefaultPayload);
       }, CONFIG.resTimeout);
     }
 
