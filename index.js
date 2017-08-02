@@ -1,4 +1,24 @@
 const CONFIG = require('./config.json');
+const ENV_CONFIG = process.env;
+
+Object.keys(CONFIG).map((key) => {
+  let _key = key.replace(/([A-Z])/g, function($1) { return '_' + $1; }).toUpperCase();
+  if (_key in ENV_CONFIG) {
+    CONFIG[key] = (Number.isNaN(ENV_CONFIG[_key] * 1) ?
+      ENV_CONFIG[_key] :
+      Number(ENV_CONFIG[_key])
+    );
+  }
+});
+
+if (!CONFIG.port ||
+  !CONFIG.hashedSocketToken ||
+  !CONFIG.postTokenPath ||
+  !CONFIG.hashedPostToken ||
+  !CONFIG.resDefaultPayload ||
+  !CONFIG.resTimeout) {
+  throw new Error('Please ensure your config is complete; see config.SAMLPLE.json for an example. If passing env vars, still include the prop in your JSON config.');
+}
 
 const Hapi = require('hapi');
 const Boom = require('boom');

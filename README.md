@@ -24,6 +24,8 @@ Default payload to respond with if a socket client doesn't respond in time
 - ### _resTimeout_
 Time limit in ms to wait for socket clients to respond back before responding with `resDefaultPayload`
 
+Config using `env` vars is partially supported (only for string/number properties) – these will override options defined in `config.json`.
+
 ## Socket API
 
 ### `auth` event (client -> server)
